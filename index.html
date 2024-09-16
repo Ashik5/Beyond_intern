@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Product Cart System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Product Cart System</h1>
+    </header>
+    <div class="form-container">
+        <div class="product-form">
+            <h2>Add New Product</h2>
+            <input type="text" id="product-name" name="product-name" placeholder="Enter product name" required>
+            <input type="number" id="price" name="price" placeholder="Enter price" required>
+            <input type="url" id="image-url" name="image-url" placeholder="Enter image URL" required>
+            <button onclick="addProduct()" class="submit-btn">Add Product</button>
+        </div>
+    </div>
+    <div class="container">
+        <div id="products" class="products">
+        </div>
+
+        <div class="cart">
+            <h2>Your Cart</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+            <div class="total-price">
+                Total Price: $<span id="total-price">0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
